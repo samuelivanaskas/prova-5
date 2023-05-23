@@ -34,12 +34,8 @@ const Contato = ({
   return (
     <S.Card>
       <S.Titulo>{titulo}</S.Titulo>
-      <S.Tag parametro="meio" meio={meio}>
-        {meio}
-      </S.Tag>
-      <S.Tag parametro="status" status={status}>
-        {status}
-      </S.Tag>
+      <S.Tag>{meio}</S.Tag>
+      <S.Tag>{status}</S.Tag>
       <S.Descricao
         disabled={!estaEditando}
         value={descricao}
