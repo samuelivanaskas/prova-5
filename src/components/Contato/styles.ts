@@ -34,7 +34,7 @@ export const Titulo = styled.h3`
   margin-bottom: 16px;
 `
 
-export const Tag = styled.span`
+export const Tag = styled.span<TagProps>`
   paddinf: 4px 8px;
   color: #fff;
   font-weight: bold;
