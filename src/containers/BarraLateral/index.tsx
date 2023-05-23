@@ -20,7 +20,7 @@ const BarraLateral = () => {
       ></Campo>
       <S.Filtros>
         <FiltroCard
-          valor={enums.Meio.NOMECOMPLETO}
+          valor={enums.Meio.EMAIL}
           criterio="meio"
           legenda="nome completo"
         />
