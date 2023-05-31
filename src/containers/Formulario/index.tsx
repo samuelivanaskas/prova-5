@@ -13,7 +13,7 @@ const Formulario = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const [nomecompleto, setNomeCompleto] = useState('')
+  const [nomecompleto, setNomeCompleto] = useState('nomecompleto')
   const [titulo, setTitulo] = useState('')
   const [descricao, setDescricao] = useState('')
   const [status, setStatus] = useState(enums.Status.ADICIONADO)
@@ -23,10 +23,10 @@ const Formulario = () => {
     const contatoParaAdicionar = new Contato(
       titulo,
       enums.Meio.TELEFONE,
-      nomecompleto,
       status,
       descricao,
-      6
+      6,
+      nomecompleto
     )
     dispatch(cadatrar(contatoParaAdicionar))
     navigate('/')
@@ -35,6 +35,7 @@ const Formulario = () => {
     <MainContainer>
       <Titulo>Novo Contato</Titulo>
       <Form onSubmit={cadastrarContato}>
+        <Campo type="meio" placeholder="Meio do Conato" />
         <Campo
           value={titulo}
           onChange={(evento) => setTitulo(evento.target.value)}
